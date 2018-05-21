@@ -13,10 +13,6 @@ import java.util.List;
 import  android.support.v7.widget.RecyclerView.*;
 import android.widget.TextView;
 
-/**
- * Created by Welcome on 5/21/2018.
- */
-
 public class ModelAdapter  extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
@@ -46,6 +42,8 @@ public class ModelAdapter  extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         modelAdapter.textTitle.setText(model.getTitle());
         modelAdapter.textbody.setText(model.getBody());
+        modelAdapter.textuserid.setText(model.getUserId());
+        modelAdapter.textid.setText(model.getId());
 
     }
 
@@ -54,13 +52,15 @@ public class ModelAdapter  extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         return list.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView textTitle, textbody;
+        public TextView textTitle, textbody,textuserid,textid;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
             textTitle = itemView.findViewById(R.id.title1);
             textbody = itemView.findViewById(R.id.body1);
+            textuserid = itemView.findViewById(R.id.userid);
+            textid = itemView.findViewById(R.id.id);
 
         }
     }

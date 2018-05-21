@@ -67,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
                         Model model = new Model();
                         model.setTitle(jsonObject.getString("title"));
                         model.setBody(jsonObject.getString("body"));
+                        model.setUserId(jsonObject.getString("userId"));
+                        model.setId(jsonObject.getString("id"));
+
                         modelList.add(model);
                     } catch (JSONException e) {
                         e.printStackTrace();
